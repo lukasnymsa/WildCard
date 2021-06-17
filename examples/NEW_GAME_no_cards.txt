@@ -1,0 +1,2 @@
+max_health = 15
+max_cards_hand = 4

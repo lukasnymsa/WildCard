@@ -1,0 +1,72 @@
+/*! \mainpage WildCard
+ *
+ *<b>Zadání z progtestu</b>
+ *
+ *Naprogramujte engine pro hraní karetního RPG
+ *
+ *Váš engine:
+ *
+ *ze souboru nahraje definici karet (jejich typ, atributy, efekty), balíčku (seznam karet v balíčku)
+ *umožní vytvořit a hrát samotnou karetní hru
+ *implementuje variantu pro jednoho hráče proti počítači (náhodné tahy nestačí)
+ *implementuje variantu pro dva hráče (výměna přes potvrzovací okno, aby soupeř neviděl karty, nebo naopak soupeři si celou dobu do karet vidí)
+ *umožňuje ukládat a načítat rozehrané hry
+ *
+ *Kde lze využít polymorfismus? (doporučené)
+ *
+ *- Typy karet: útočné, obranné, speciální, ...
+ *- Efekty akcí: síla útoku, síla obrany, vem si X karet, zahoď X karet
+ *- Ovládání hráče: lokální hráč, umělá inteligence (různé druhy), síťový hráč
+ *- Uživatelské rozhraní: konzole, ncurses, SDL, OpenGL (různé varianty), ...
+ *
+ *
+ *<b>WildCard</b>
+ *
+ *Cílem semestrální práce bylo vytvořit karetní hru, která dokáže načítat konfiguraci ze souboru a poté hrát. WildCard se bude chová jako klasická karetní hra na způsob Bang!. Hra obsahovaje různé druhy karet a 2 hrači se střídají přes vyměnovací okno. Hráč, který ztratí všechny životy, prohrává.
+ *
+ *Program využívá knihovnu ncurses k přehlednějšímu zobrazení. Uživatel má možnost si vytvořit vlastní karty v konfiguračním souboru.
+ *
+ *Uživatel hru spustí a zobrazí se menu.
+ *- Hrát proti hráči
+ *- Hrát proti počítači
+ *- Načíst hru
+ *- Konec 
+ *
+ *Po zvolení typu hry se zobrazí prohlížeč souborů v dané složce. Hráč si vybere soubor, který chce načíst.
+ *
+ *Soubor s nastavením hry bude obsahovat:
+ *- Maximální počet životů
+ *- Maximální počet karet v ruce
+ *- Jednotlivé karty typu:
+ *	- Attack - Název karty, síla útoku
+ *	- Defensive - Název karty
+ *	- Heal - Název karty, počet životů
+ *	- Steal - Název karty, počet karet
+ *
+ *Schéma konfiguračního souboru:
+ *- max_health = <pocet>
+ *- max_cards = <pocet>
+ *- <nazev karty o velikosti maximalne 20 znaku> = <typ>, <sila/pocet>
+ *
+ *- U obranne karty (def) se sila/pocet neuvadi
+ *
+ *Ukázka konfiguračního souboru:
+ *- max_health = 8
+ *- max_cards_hand = 4
+ *-
+ *- BANG = attack, 3
+ *- GRANAT = attack, 2
+ *- VEDLE! = def
+ *- PIVO = heal, 1
+ *- PANIKA = take, 2
+ *
+ *max_health musi být větší než 0, stejně tak i max_cards.
+ *Konfigurační soubor musí obsahovat alespoň jednu herní kartu.
+ *
+ *Hra se dá uložit. Uložené soubory se budou ukládat do složky saves.
+ *Uložený soubor bude textový, nejdřív bude obsahovat konfiguraci hry a poté karty v rukách hračů.
+ *
+ *K načítaní konfiguračních souborů slouží složka config, do které se dané soubory nahrají a poté se načtou v samotné hře.
+ *
+ *Není potřeba soubory vytvářet, v prohlížeči souborů se tlačítkem s dá dostat do složky examples ve které jsou uložené ukazkové konfigurační soubory či save soubory.
+ */

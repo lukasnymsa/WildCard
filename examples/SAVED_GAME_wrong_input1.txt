@@ -1,0 +1,15 @@
+player_AI = 0
+max_health = 15
+max_cards_hand = 4
+health1 = 1
+health2 = 1
+current_player = 2
+
+BANG1 = atta, 1
+HOUFNICE = attack, 3
+VEDLE! = def
+PANIKA = take, 1
+PIVO = heal, 1
+
+player1 = BANG1, HOUFNICE
+player2 = BANG1

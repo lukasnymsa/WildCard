@@ -1,0 +1,8 @@
+max_health = 15
+max_cards_hand = 4
+
+VEDLE! = def
+BANG! = attack, 1
+HOUFNICE = attack, 3
+PANIKA = take, 1
+PIVO = heal, 1
